@@ -31,13 +31,13 @@ patch-locale:
 	msgfmt -c -v -o "i18n/$(TR_LOCALE)/$(MO_FILE)" "i18n/$(TR_LOCALE)/$(PO_FILE)"
 
 	if [ -e  "/usr/share/locale/$(LL)/" ]; then \
-		sudo mkdir -p /usr/share/locale/$(LL)/LC_MESSAGES; \
-		sudo cp "i18n/$(TR_LOCALE)/$(MO_FILE)" /usr/share/locale/$(LL)/LC_MESSAGES; \
+		mkdir -p ./locale/$(LL)/LC_MESSAGES; \
+		cp "i18n/$(TR_LOCALE)/$(MO_FILE)" ./locale/$(LL)/LC_MESSAGES; \
 	fi
 	
 	if [ -e  "/usr/share/locale/$(LL)_$(COUNTRY)/" ]; then \
-		sudo mkdir -p /usr/share/locale/$(LL)_$(COUNTRY)/LC_MESSAGES; \
-		sudo cp "i18n/$(TR_LOCALE)/$(MO_FILE)" /usr/share/locale/$(LL)_$(COUNTRY)/LC_MESSAGES; \
+		mkdir -p ./locale/$(LL)_$(COUNTRY)/LC_MESSAGES; \
+		cp "i18n/$(TR_LOCALE)/$(MO_FILE)" ./locale/$(LL)_$(COUNTRY)/LC_MESSAGES; \
 	fi
 
 run-default:
@@ -48,5 +48,5 @@ run:
 
 clean:
 	rm $(PROG) po/$(POT_PREFIX)-*.pot "i18n/$(TR_LOCALE)/$(MO_FILE)"
-	sudo rm /usr/share/locale/$(LL)/LC_MESSAGES/$(MO_FILE)
-	sudo rm /usr/share/locale/$(LL)_$(COUNTRY)/LC_MESSAGES/$(MO_FILE)
+	rm ./locale/$(LL)/LC_MESSAGES/$(MO_FILE)
+	rm ./locale/$(LL)_$(COUNTRY)/LC_MESSAGES/$(MO_FILE)

@@ -8,6 +8,9 @@ int main(void)
   
   setlocale(LC_ALL, "" );
   textdomain("hello");
+
+  // Place to look for MO file
+  bindtextdomain("hello", "./locale/");  
   
   printf(gettext("Hello, world!\n"));
   printf(gettext("How are you\n"));

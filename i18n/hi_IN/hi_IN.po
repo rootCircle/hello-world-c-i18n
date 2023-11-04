@@ -1,14 +1,14 @@
-# Hindi translations for hello-world-c-i package.
-# Copyright (C) 2023 THE hello-world-c-i'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the hello-world-c-i package.
+# Hindi translations for PACKAGE package.
+# Copyright (C) 2023 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
 # Violow <violow@buddy>, 2023.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: hello-world-c-i 18n\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-05 01:40+0530\n"
-"PO-Revision-Date: 2023-11-05 01:40+0530\n"
+"POT-Creation-Date: 2023-11-05 02:27+0530\n"
+"PO-Revision-Date: 2023-11-05 02:27+0530\n"
 "Last-Translator: Violow <violow@buddy>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
 "Language: hi\n"
@@ -16,17 +16,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: hello.c:12
+#: hello.c:15
 #, c-format
 msgid "Hello, world!\n"
-msgstr "holaaa\n"
+msgstr "Hello\n"
 
-#: hello.c:13
+#: hello.c:16
 #, c-format
 msgid "How are you\n"
-msgstr "hola\n"
+msgstr "namaste\n"
 
-#: hello.c:14
+#: hello.c:17
 #, c-format
 msgid "I am fine\n"
-msgstr "namaste!\n"
+msgstr "fine\n"
