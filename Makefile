@@ -1,18 +1,19 @@
 PROG=hello
+SRC_NAME=hello.c
+LL=hi
+COUNTRY=IN
+TEXT_DOMAIN = hello
+
 # May cause inconsistency in calls
 time=$$(date +'%Y%m%d-%H%M%S')
 POT_PREFIX=$(PROG)
 POT_NAME=$(POT_PREFIX)-$(time).pot
-SRC_NAME=hello.c
-PO_FILE=hi.po
-MO_FILE=hello.mo
-LL=hi
-COUNTRY=IN
 TR_LOCALE=$(LL)_$(COUNTRY)
-TEXT_DOMAIN = hello
+PO_FILE=$(TR_LOCALE).po
+MO_FILE=$(TEXT_DOMAIN).mo
 
 locale:
-	mkdir po
+	mkdir -p po
 	mkdir -p i18n/$(TR_LOCALE)
 
 	xgettext -d $(TEXT_DOMAIN) -s -o "po/$(POT_NAME)" $(SRC_NAME)
@@ -41,6 +42,7 @@ patch-locale:
 
 run-default:
 	./$(PROG)
+
 run:
 	LANGUAGE=$(TR_LOCALE) ./$(PROG)
 
